@@ -1,10 +1,12 @@
 import { Center, Environment, OrbitControls } from "@react-three/drei";
-import { Gallary1 } from "./gallary1";
 import { Perf } from "r3f-perf";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useThree } from "@react-three/fiber";
 import { toggleFullScreen } from "../utils";
+import { Gallary1 } from "./Gallary1";
+import { Gallary2 } from "./Gallary2";
+import { GallaryTopfloor } from "./GallaryTopFloor";
 
 const Experience = () => {
   const { gl, camera } = useThree();
@@ -37,19 +39,19 @@ const Experience = () => {
       <OrbitControls makeDefault />
 
       <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
-      <Environment
+      {/* <Environment
         preset="city"
         ground={{
           height: 7,
           radius: 28,
           scale: 100,
         }}
-      />
+      /> */}
       <ambientLight intensity={0.5} />
       <Center>
-        <mesh>
-          <Gallary1 />
-        </mesh>
+        <Gallary1 />
+        <Gallary2 />
+        <GallaryTopfloor />
       </Center>
     </>
   );
