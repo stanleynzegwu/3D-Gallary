@@ -6,10 +6,17 @@ import { useThree } from "@react-three/fiber";
 import { toggleFullScreen } from "../utils";
 import { Gallary1 } from "./Gallary1";
 import { Gallary2 } from "./Gallary2";
+import { Gallary3 } from "./Gallary3";
 import { GallaryTopfloor } from "./GallaryTopFloor";
+import * as THREE from "three";
+import { GallaryWall } from "./GallaryWall";
 
 const Experience = () => {
   const { gl, camera } = useThree();
+
+  const floorMaterial = new THREE.MeshStandardMaterial({
+    roughness: 0.04,
+  });
 
   toggleFullScreen(gl);
   useEffect(() => {
@@ -51,7 +58,9 @@ const Experience = () => {
       <Center>
         <Gallary1 />
         <Gallary2 />
-        <GallaryTopfloor />
+        <Gallary3 floorMaterial={floorMaterial} />
+        <GallaryTopfloor floorMaterial={floorMaterial} />
+        <GallaryWall />
       </Center>
     </>
   );

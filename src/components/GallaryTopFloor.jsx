@@ -1,16 +1,18 @@
 import React, { useRef } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
+import { frames2 } from "../constants";
 
-export function GallaryTopfloor(props) {
+export function GallaryTopfloor({ floorMaterial }) {
   const { nodes } = useGLTF("/models/gallaryTopFloor.glb");
 
   const texture = useTexture("textures/gallaryTopFloor.jpg");
 
-  const floorMaterial = new THREE.MeshStandardMaterial({
-    map: texture,
-    roughness: 0.04,
-  });
+  // const floorMaterial = new THREE.MeshStandardMaterial({
+  //   map: texture,
+  //   roughness: 0.04,
+  // });
+  floorMaterial.map = texture;
 
   texture.flipY = false;
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -20,84 +22,17 @@ export function GallaryTopfloor(props) {
   });
 
   return (
-    <group {...props} dispose={null}>
-      <mesh
-        name="frame35"
-        geometry={nodes.frame35.geometry}
-        material={textureMaterial}
-        position={[-12.008, 7.388, 9.252]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <mesh
-        name="frame36"
-        geometry={nodes.frame36.geometry}
-        material={textureMaterial}
-        position={[-13.168, 7.388, 9.252]}
-        rotation={[-Math.PI / 2, 0, -Math.PI]}
-      />
-      <mesh
-        name="frame37"
-        geometry={nodes.frame37.geometry}
-        material={textureMaterial}
-        position={[-27.549, 7.388, 9.252]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <mesh
-        name="frame38"
-        geometry={nodes.frame38.geometry}
-        material={textureMaterial}
-        position={[-28.693, 7.388, 9.151]}
-        rotation={[-Math.PI / 2, 0, -Math.PI]}
-      />
-      <mesh
-        name="frame39"
-        geometry={nodes.frame39.geometry}
-        material={textureMaterial}
-        position={[-27.549, 7.385, -4.233]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <mesh
-        name="frame40"
-        geometry={nodes.frame40.geometry}
-        material={textureMaterial}
-        position={[-28.712, 7.385, -4.233]}
-        rotation={[-Math.PI / 2, 0, -Math.PI]}
-      />
-      <mesh
-        name="frame41"
-        geometry={nodes.frame41.geometry}
-        material={textureMaterial}
-        position={[-12.008, 7.388, -4.248]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <mesh
-        name="frame42"
-        geometry={nodes.frame42.geometry}
-        material={textureMaterial}
-        position={[-13.168, 7.388, -4.248]}
-        rotation={[-Math.PI / 2, 0, -Math.PI]}
-      />
-      <mesh
-        name="frame43"
-        geometry={nodes.frame43.geometry}
-        material={textureMaterial}
-        position={[-7.819, 7.516, 20.455]}
-        rotation={[0, 1.571, 0]}
-      />
-      <mesh
-        name="frame44"
-        geometry={nodes.frame44.geometry}
-        material={textureMaterial}
-        position={[23.334, 7.516, -27.651]}
-        rotation={[0, -Math.PI / 2, 0]}
-      />
-      <mesh
-        name="frame45"
-        geometry={nodes.frame45.geometry}
-        material={textureMaterial}
-        position={[-7.819, 7.516, -27.651]}
-        rotation={[0, -Math.PI / 2, 0]}
-      />
+    <group dispose={null}>
+      {frames2(nodes, textureMaterial).map(({ name, geometry, position, rotation }) => (
+        <mesh
+          key={geometry + name}
+          name={name}
+          geometry={geometry}
+          material={textureMaterial}
+          position={position}
+          rotation={rotation}
+        />
+      ))}
       <mesh
         name="mergedUpper"
         geometry={nodes.mergedUpper.geometry}

@@ -246,6 +246,87 @@ export const frames = (nodes,textureMaterial) => [
     },
 ]
 
+export const frames2 = (nodes,textureMaterial) => 
+[
+    {
+      'name':"frame35",
+      'geometry':nodes.frame35.geometry,
+      'material':textureMaterial,
+      'position':[-12.008, 7.388, 9.252],
+      'rotation':[-Math.PI / 2, 0, 0],
+    },
+    {
+      'name':"frame36",
+      'geometry':nodes.frame36.geometry,
+      'material':textureMaterial,
+      'position':[-13.168, 7.388, 9.252],
+      'rotation':[-Math.PI / 2, 0, -Math.PI],
+    },
+    {
+      'name':"frame37",
+      'geometry':nodes.frame37.geometry,
+      'material':textureMaterial,
+      'position':[-27.549, 7.388, 9.252],
+      'rotation':[-Math.PI / 2, 0, 0],
+    },
+    {
+      'name':"frame38",
+      'geometry':nodes.frame38.geometry,
+      'material':textureMaterial,
+      'position':[-28.693, 7.388, 9.151],
+      'rotation':[-Math.PI / 2, 0, -Math.PI],
+    },
+    {
+      'name':"frame39",
+      'geometry':nodes.frame39.geometry,
+      'material':textureMaterial,
+      'position':[-27.549, 7.385, -4.233],
+      'rotation':[-Math.PI / 2, 0, 0],
+    },
+    {
+      'name':"frame40",
+      'geometry':nodes.frame40.geometry,
+      'material':textureMaterial,
+      'position':[-28.712, 7.385, -4.233],
+      'rotation':[-Math.PI / 2, 0, -Math.PI],
+    },
+    {
+      'name':"frame41",
+      'geometry':nodes.frame41.geometry,
+      'material':textureMaterial,
+      'position':[-12.008, 7.388, -4.248],
+      'rotation':[-Math.PI / 2, 0, 0],
+    },
+    {
+      'name':"frame42",
+      'geometry':nodes.frame42.geometry,
+      'material':textureMaterial,
+      'position':[-13.168, 7.388, -4.248],
+      'rotation':[-Math.PI / 2, 0, -Math.PI],
+    },
+    {
+      'name':"frame43",
+      'geometry':nodes.frame43.geometry,
+      'material':textureMaterial,
+      'position':[-7.819, 7.516, 20.455],
+      'rotation':[0, 1.571, 0],
+    },
+    {
+      'name':"frame44",
+      'geometry':nodes.frame44.geometry,
+      'material':textureMaterial,
+      'position':[23.334, 7.516, -27.651],
+      'rotation':[0, -Math.PI / 2, 0],
+    },
+    {
+      'name':"frame45",
+      'geometry':nodes.frame45.geometry,
+      'material':textureMaterial,
+      'position':[-7.819, 7.516, -27.651],
+      'rotation':[0, -Math.PI / 2, 0],
+    },
+]
+
 export const pivots = (nodes,textureMaterial) => [
   {
   'name':"pivot1",
@@ -552,3 +633,82 @@ export const pivots = (nodes,textureMaterial) => [
         position={[-13.193, 2.812, -19.36]}
         rotation={[Math.PI, 0, Math.PI]}
       }, */}
+
+      //DOWN FRAMES
+    //   <mesh
+    //   name="frame35"
+    //   geometry={nodes.frame35.geometry}
+    //   material={textureMaterial}
+    //   position={[-12.008, 7.388, 9.252]}
+    //   rotation={[-Math.PI / 2, 0, 0]}
+    // />
+    // <mesh
+    //   name="frame36"
+    //   geometry={nodes.frame36.geometry}
+    //   material={textureMaterial}
+    //   position={[-13.168, 7.388, 9.252]}
+    //   rotation={[-Math.PI / 2, 0, -Math.PI]}
+    // />
+    // <mesh
+    //   name="frame37"
+    //   geometry={nodes.frame37.geometry}
+    //   material={textureMaterial}
+    //   position={[-27.549, 7.388, 9.252]}
+    //   rotation={[-Math.PI / 2, 0, 0]}
+    // />
+    // <mesh
+    //   name="frame38"
+    //   geometry={nodes.frame38.geometry}
+    //   material={textureMaterial}
+    //   position={[-28.693, 7.388, 9.151]}
+    //   rotation={[-Math.PI / 2, 0, -Math.PI]}
+    // />
+    // <mesh
+    //   name="frame39"
+    //   geometry={nodes.frame39.geometry}
+    //   material={textureMaterial}
+    //   position={[-27.549, 7.385, -4.233]}
+    //   rotation={[-Math.PI / 2, 0, 0]}
+    // />
+    // <mesh
+    //   name="frame40"
+    //   geometry={nodes.frame40.geometry}
+    //   material={textureMaterial}
+    //   position={[-28.712, 7.385, -4.233]}
+    //   rotation={[-Math.PI / 2, 0, -Math.PI]}
+    // />
+    // <mesh
+    //   name="frame41"
+    //   geometry={nodes.frame41.geometry}
+    //   material={textureMaterial}
+    //   position={[-12.008, 7.388, -4.248]}
+    //   rotation={[-Math.PI / 2, 0, 0]}
+    // />
+    // <mesh
+    //   name="frame42"
+    //   geometry={nodes.frame42.geometry}
+    //   material={textureMaterial}
+    //   position={[-13.168, 7.388, -4.248]}
+    //   rotation={[-Math.PI / 2, 0, -Math.PI]}
+    // />
+    // <mesh
+    //   name="frame43"
+    //   geometry={nodes.frame43.geometry}
+    //   material={textureMaterial}
+    //   position={[-7.819, 7.516, 20.455]}
+    //   rotation={[0, 1.571, 0]}
+    // />
+    // <mesh
+    //   name="frame44"
+    //   geometry={nodes.frame44.geometry}
+    //   material={textureMaterial}
+    //   position={[23.334, 7.516, -27.651]}
+    //   rotation={[0, -Math.PI / 2, 0]}
+    // />
+    // <mesh
+    //   name="frame45"
+    //   geometry={nodes.frame45.geometry}
+    //   material={textureMaterial}
+    //   position={[-7.819, 7.516, -27.651]}
+    //   rotation={[0, -Math.PI / 2, 0]}
+    // />
